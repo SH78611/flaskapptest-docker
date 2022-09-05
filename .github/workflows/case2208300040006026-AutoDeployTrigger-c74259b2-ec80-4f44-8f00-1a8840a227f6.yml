@@ -31,13 +31,13 @@ jobs:
           username: ${{ secrets.CASE2208300040006026_REGISTRY_USERNAME }}
           password: ${{ secrets.CASE2208300040006026_REGISTRY_PASSWORD }}
 
-      - name: Build and push container image to registry
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: docker.io/0bbaa953/flaskapptest/flaskapptest:${{ github.sha }}
-          file: ./Dockerfile
-          context: ./
+      # - name: Build and push container image to registry
+      #   uses: docker/build-push-action@v2
+      #   with:
+      #     push: true
+      #     tags: docker.io/0bbaa953/flaskapptest/flaskapptest:${{ github.sha }}
+      #     file: ./Dockerfile
+      #     context: ./
 
 
   deploy:
